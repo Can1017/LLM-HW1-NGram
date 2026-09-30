@@ -5,6 +5,7 @@ import json
 import math
 import re
 from pathlib import Path
+from urllib.parse import unquote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +68,11 @@ def test_ranking_generation_and_report_links():
             assert (ROOT / target).exists(), target
     embedded = re.findall(r'<img src="([^"]+)"', report)
     assert len(embedded) == 7
-    assert all((ROOT / target).is_file() for target in embedded)
+    expected_prefix = "/Can1017/LLM-HW1-NGram/main/figures/full/"
+    for target in embedded:
+        parsed = urlparse(target)
+        assert parsed.scheme == "https" and parsed.netloc == "raw.githubusercontent.com"
+        assert parsed.path.startswith(expected_prefix)
+        assert (ROOT / "figures" / "full" / unquote(parsed.path.rsplit("/", 1)[-1])).is_file()
     with (ROOT / "figures" / "full" / "05_受限候选排序.csv").open(encoding="utf-8-sig", newline="") as file:
         assert len(list(csv.DictReader(file))) == len(ranking)
