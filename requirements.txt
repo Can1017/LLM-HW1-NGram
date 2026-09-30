@@ -1,0 +1,4 @@
+# Windows Python：语料清洗、可视化和产物检查。
+# WSL 中的 KenLM Python 模块由 env/build_kenlm_python.sh 编译。
+matplotlib>=3.8,<4
+pytest>=8,<9

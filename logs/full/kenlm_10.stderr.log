@@ -1,0 +1,32 @@
+=== 1/5 Counting and sorting n-grams ===
+Reading /home/lican/hw1_kenlm_full/train.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+Unigram tokens 5790057 types 70621
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:847452 2:34904652 3:65446224 4:104713952 5:152707856 6:209427904 7:274874144 8:349046528 9:431945088 10:523569792
+Statistics:
+1 70621 D1=0.183979 D2=1.71306 D3+=2.52937
+2 1480823 D1=0.73209 D2=1.13203 D3+=1.42376
+3 3622799 D1=0.857171 D2=1.22736 D3+=1.44157
+4 4669096 D1=0.932984 D2=1.3354 D3+=1.53182
+5 4917412 D1=0.968166 D2=1.44165 D3+=1.60093
+6 4877654 D1=0.98331 D2=1.53057 D3+=1.6352
+7 4739927 D1=0.989994 D2=1.57878 D3+=1.73084
+8 4569340 D1=0.99335 D2=1.62671 D3+=1.80673
+9 4384980 D1=0.995181 D2=1.66386 D3+=1.80445
+10 4197315 D1=0.981805 D2=1.64983 D3+=1.77881
+Memory estimate for binary LM:
+type      MB
+probing  835 assuming -p 1.5
+probing 1025 assuming -r models -p 1.5
+trie     433 without quantization
+trie     236 assuming -q 8 -b 8 quantization 
+trie     370 assuming -a 22 array pointer compression
+trie     172 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:847452 2:23693168 3:72455980 4:112058304 5:137687536 6:156084928 7:170637372 8:182773600 9:192939120 10:201471120
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:847452 2:23693168 3:72455980 4:112058304 5:137687536 6:156084928 7:170637372 8:182773600 9:192939120 10:201471120
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:2983068 kB	VmRSS:31996 kB	RSSMax:1273144 kB	user:48.6401	sys:71.3184	CPU:119.96	real:69.9749

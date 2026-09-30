@@ -1,0 +1,30 @@
+# 本机环境、缓存与临时文件
+.venv/
+.tools/
+.tmp/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# 原始语料及大体积衍生文件由 fetch_corpus.py 重建
+data/raw/199801.zip
+data/raw/199801/
+results/completed/train.txt
+results/completed/valid.txt
+results/completed/test.txt
+results/completed/training.json
+results/completed/generations.json
+results/methods/
+results/corpus_survey/
+models/
+
+# 早期抽样实验的图表与日志；正式结果位于 full 子目录
+figures/*.png
+figures/*.csv
+logs/methods/
+logs/env_setup.log
+
+# 本地历史草案与课件提取文本
+docs/SPEC.md
+docs/ref/

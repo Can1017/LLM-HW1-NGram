@@ -1,0 +1,27 @@
+=== 1/5 Counting and sorting n-grams ===
+Reading /home/lican/hw1_kenlm_full/train.txt
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+Unigram tokens 5790057 types 70621
+=== 2/5 Calculating and sorting adjusted counts ===
+Chain sizes: 1:847452 2:209427904 3:392677344 4:628283712 5:916247168
+Statistics:
+1 70621 D1=0.183979 D2=1.71306 D3+=2.52937
+2 1480823 D1=0.73209 D2=1.13203 D3+=1.42376
+3 3622799 D1=0.857171 D2=1.22736 D3+=1.44157
+4 4669096 D1=0.932984 D2=1.3354 D3+=1.53182
+5 4917412 D1=0.944467 D2=1.40365 D3+=1.47249
+Memory estimate for binary LM:
+type     MB
+probing 309 assuming -p 1.5
+probing 366 assuming -r models -p 1.5
+trie    149 without quantization
+trie     81 assuming -q 8 -b 8 quantization 
+trie    131 assuming -a 22 array pointer compression
+trie     63 assuming -a 22 -q 8 -b 8 array pointer compression and quantization
+=== 3/5 Calculating and sorting initial probabilities ===
+Chain sizes: 1:847452 2:23693168 3:72455980 4:112058304 5:137687536
+=== 4/5 Calculating and writing order-interpolated probabilities ===
+Chain sizes: 1:847452 2:23693168 3:72455980 4:112058304 5:137687536
+=== 5/5 Writing ARPA model ===
+Name:lmplz	VmPeak:2268556 kB	VmRSS:31628 kB	RSSMax:537728 kB	user:7.50193	sys:3.27555	CPU:10.7775	real:6.73933

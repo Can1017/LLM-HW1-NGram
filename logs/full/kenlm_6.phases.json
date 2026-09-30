@@ -1,0 +1,32 @@
+[
+  {
+    "stage": 1,
+    "name": "Counting and sorting n-grams",
+    "start_seconds": 0.0680635509999945
+  },
+  {
+    "stage": 2,
+    "name": "Calculating and sorting adjusted counts",
+    "start_seconds": 2.0971914440000035
+  },
+  {
+    "stage": 3,
+    "name": "Calculating and sorting initial probabilities",
+    "start_seconds": 3.816408492000022
+  },
+  {
+    "stage": 4,
+    "name": "Calculating and writing order-interpolated probabilities",
+    "start_seconds": 5.213049193000018
+  },
+  {
+    "stage": 5,
+    "name": "Writing ARPA model",
+    "start_seconds": 5.937975692000009
+  },
+  {
+    "stage": 6,
+    "name": "完成",
+    "start_seconds": 10.858458449000011
+  }
+]

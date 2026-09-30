@@ -1,0 +1,21 @@
+﻿method,order,length,ended_by_eos,seed
+KenLM,1,8,1,42
+Stupid Backoff,1,8,1,42
+KenLM,2,31,1,42
+Stupid Backoff,2,4,1,42
+KenLM,3,34,1,42
+Stupid Backoff,3,15,1,42
+KenLM,4,5,1,42
+Stupid Backoff,4,6,1,42
+KenLM,5,49,1,42
+Stupid Backoff,5,42,1,42
+KenLM,6,15,1,42
+Stupid Backoff,6,21,1,42
+KenLM,7,15,1,42
+Stupid Backoff,7,21,1,42
+KenLM,8,15,1,42
+Stupid Backoff,8,21,1,42
+KenLM,9,15,1,42
+Stupid Backoff,9,21,1,42
+KenLM,10,15,1,42
+Stupid Backoff,10,21,1,42

@@ -1,0 +1,460 @@
+{
+  "corpus": "complete processed train split",
+  "rows": [
+    {
+      "method": "KenLM MKN",
+      "order": 1,
+      "train_seconds": 0.7575885269999958,
+      "arpa_bytes": 1362413,
+      "peak_kb": 721880,
+      "ngram_counts": {
+        "1": 70621
+      },
+      "model": "models/full/kenlm_1.arpa",
+      "log": "logs/full/kenlm_1.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "1",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_1.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 7.3333222527470205,
+          "ppl": 1530.4579031993098
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 7.345732123207031,
+          "ppl": 1549.5690255322077
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 2,
+      "train_seconds": 2.108448770999999,
+      "arpa_bytes": 37466966,
+      "peak_kb": 618032,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823
+      },
+      "model": "models/full/kenlm_2.arpa",
+      "log": "logs/full/kenlm_2.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "2",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_2.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.6890707531963125,
+          "ppl": 295.6187901517252
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.681526937336252,
+          "ppl": 293.39708702993113
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 3,
+      "train_seconds": 3.409919101,
+      "arpa_bytes": 160843355,
+      "peak_kb": 578920,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799
+      },
+      "model": "models/full/kenlm_3.arpa",
+      "log": "logs/full/kenlm_3.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "3",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_3.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.3236156003731185,
+          "ppl": 205.12418995535683
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.306594041666423,
+          "ppl": 201.6622042972822
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 4,
+      "train_seconds": 6.119634052000009,
+      "arpa_bytes": 366763713,
+      "peak_kb": 556472,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096
+      },
+      "model": "models/full/kenlm_4.arpa",
+      "log": "logs/full/kenlm_4.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "4",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_4.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.261506414433334,
+          "ppl": 192.77166670121957
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.240650828587214,
+          "ppl": 188.79293426877246
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 5,
+      "train_seconds": 6.814730937999997,
+      "arpa_bytes": 626269359,
+      "peak_kb": 537728,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096,
+        "5": 4917412
+      },
+      "model": "models/full/kenlm_5.arpa",
+      "log": "logs/full/kenlm_5.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "5",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_5.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.249087586300392,
+          "ppl": 190.39247248357646
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.227861367929346,
+          "ppl": 186.39374930715925
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 6,
+      "train_seconds": 10.858458449000011,
+      "arpa_bytes": 915510832,
+      "peak_kb": 524236,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096,
+        "5": 4917412,
+        "6": 4877654
+      },
+      "model": "models/full/kenlm_6.arpa",
+      "log": "logs/full/kenlm_6.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "6",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_6.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.246782878878391,
+          "ppl": 189.95417880250656
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.225670525993858,
+          "ppl": 185.98583706344672
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 7,
+      "train_seconds": 10.363251287999987,
+      "arpa_bytes": 1230186344,
+      "peak_kb": 686900,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096,
+        "5": 4917412,
+        "6": 4877654,
+        "7": 4739927
+      },
+      "model": "models/full/kenlm_7.arpa",
+      "log": "logs/full/kenlm_7.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "7",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_7.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.246425664233604,
+          "ppl": 189.88633650585209
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.225079501655744,
+          "ppl": 185.87594738413387
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 8,
+      "train_seconds": 17.599274220000012,
+      "arpa_bytes": 1560755834,
+      "peak_kb": 876100,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096,
+        "5": 4917412,
+        "6": 4877654,
+        "7": 4739927,
+        "8": 4569340
+      },
+      "model": "models/full/kenlm_8.arpa",
+      "log": "logs/full/kenlm_8.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "8",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_8.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.246529951270869,
+          "ppl": 189.90614022192096
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.225128396520317,
+          "ppl": 185.88503598559979
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 9,
+      "train_seconds": 22.80540466599996,
+      "arpa_bytes": 1899507677,
+      "peak_kb": 1076928,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096,
+        "5": 4917412,
+        "6": 4877654,
+        "7": 4739927,
+        "8": 4569340,
+        "9": 4384980
+      },
+      "model": "models/full/kenlm_9.arpa",
+      "log": "logs/full/kenlm_9.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "9",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_9.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.246649166218837,
+          "ppl": 189.92878122209225
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.22521993589826,
+          "ppl": 185.90205256499456
+        }
+      }
+    },
+    {
+      "method": "KenLM MKN",
+      "order": 10,
+      "train_seconds": 70.14048496000004,
+      "arpa_bytes": 2248452001,
+      "peak_kb": 1273144,
+      "ngram_counts": {
+        "1": 70621,
+        "2": 1480823,
+        "3": 3622799,
+        "4": 4669096,
+        "5": 4917412,
+        "6": 4877654,
+        "7": 4739927,
+        "8": 4569340,
+        "9": 4384980,
+        "10": 4197315
+      },
+      "model": "models/full/kenlm_10.arpa",
+      "log": "logs/full/kenlm_10.stderr.log",
+      "command": [
+        "/mnt/d/PostGraduate/LLM/hw1/code/.tools/kenlm/bin/lmplz",
+        "-o",
+        "10",
+        "-S",
+        "2G",
+        "-T",
+        "/home/lican/hw1_kenlm_full",
+        "--discount_fallback",
+        "--text",
+        "/home/lican/hw1_kenlm_full/train.txt",
+        "--arpa",
+        "/home/lican/hw1_kenlm_full/kenlm_10.arpa",
+        "--verbose_header"
+      ],
+      "evaluation": {
+        "valid": {
+          "sentences": 29825,
+          "predicted_tokens": 781831,
+          "nll_nats_per_token": 5.246761298258948,
+          "ppl": 189.950079517895
+        },
+        "test": {
+          "sentences": 28704,
+          "predicted_tokens": 772216,
+          "nll_nats_per_token": 5.225342488342176,
+          "ppl": 185.92483671196328
+        }
+      }
+    }
+  ]
+}

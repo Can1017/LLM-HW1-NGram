@@ -1,0 +1,4 @@
+﻿split,articles,sentences,tokens,unknown_tokens
+train,14881,227527,5790057,55927
+valid,1860,29825,752006,14549
+test,1860,28704,743512,15660

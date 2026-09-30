@@ -1,0 +1,107 @@
+{
+  "corpus": "complete processed train split",
+  "sentences": 227527,
+  "tokens": 5790057,
+  "rows": [
+    {
+      "method": "Stupid Backoff",
+      "order": 1,
+      "train_seconds": 9.020777088999921,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 70619,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 2,
+      "train_seconds": 18.601029064000045,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 1480823,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 3,
+      "train_seconds": 45.20809880899992,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 3640207,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 4,
+      "train_seconds": 47.42456270399998,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 4787293,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 5,
+      "train_seconds": 51.68389115600007,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 5202450,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 6,
+      "train_seconds": 61.65203537000002,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 5358226,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 7,
+      "train_seconds": 117.09601259299995,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 5427147,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 8,
+      "train_seconds": 92.63959095400014,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 5463421,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 9,
+      "train_seconds": 46.16722495699992,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 5483911,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    },
+    {
+      "method": "Stupid Backoff",
+      "order": 10,
+      "train_seconds": 42.251241687999936,
+      "sentences": 227527,
+      "tokens": 5790057,
+      "unique_ngrams": 5497098,
+      "storage": "/home/lican/hw1_stupid_full/stupid_counts.sqlite3",
+      "alpha": 0.4
+    }
+  ]
+}
