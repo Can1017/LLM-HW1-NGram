@@ -65,5 +65,8 @@ def test_ranking_generation_and_report_links():
     for target in re.findall(r"!?\[[^]]*\]\(([^)]+)\)", report):
         if not target.startswith(("https://", "http://")):
             assert (ROOT / target).exists(), target
+    embedded = re.findall(r'<img src="([^"]+)"', report)
+    assert len(embedded) == 7
+    assert all((ROOT / target).is_file() for target in embedded)
     with (ROOT / "figures" / "full" / "05_受限候选排序.csv").open(encoding="utf-8-sig", newline="") as file:
         assert len(list(csv.DictReader(file))) == len(ranking)

@@ -177,9 +177,9 @@ def build():
 
 按文章去除 {stats['raw']['duplicate_articles']} 篇重复记录后，保留 {stats['raw']['articles_after_dedup']:,} 篇、{stats['raw']['clean_sentences']:,} 句、{stats['raw']['clean_tokens']:,} 词。划分在文章级进行，词表只由训练集建立；训练中仅出现一次的词和评测集词表外词映射为 `<UNK>`。训练、验证、测试各包含 {split['train']['articles']:,}、{split['valid']['articles']:,}、{split['test']['articles']:,} 篇文章。训练数据是**全量训练划分**；验证与测试保留为独立留出集，不能并入训练。
 
-![图 1：语料划分](figures/full/01_语料规模.png)
+<img src="./figures/full/01_语料规模.png" alt="图 1：语料划分" width="900">
 
-*图 1　词级训练、验证、测试规模；[原始数据 CSV](figures/full/01_语料规模.csv)。*
+*图 1　词级训练、验证、测试规模。*
 
 训练端将每句转为一行、以空格分词，文章之间不拼接上下文。词首、词尾标记用于模型内部计数。`lmplz` 是 KenLM 的语言模型估计程序：它读取逐行分词语料，统计 n-gram，使用 Modified Kneser–Ney 平滑估计条件概率，并输出 ARPA 文本模型；这里的 `-o` 指模型阶数，`-S 2G` 限定排序内存，`-T` 指定临时目录。各阶训练统一使用 `--discount_fallback` 配置。Stupid Backoff 的回退系数为 0.4。KenLM 的概率经过归一化，可计算 perplexity；Stupid Backoff 的分数不构成规范概率分布，因此只比较同一候选集上的排序，**不计算其 perplexity**。
 
@@ -222,15 +222,15 @@ python build_full_report.py
 
 {chr(10).join(table)}
 
-![图 2：训练时间](figures/full/02_全量训练耗时.png)
+<img src="./figures/full/02_全量训练耗时.png" alt="图 2：训练时间" width="900">
 
-*图 2　KenLM 独立训练与 Stupid Backoff 累计计数时间；[原始数据 CSV](figures/full/02_全量训练耗时.csv)。*
+*图 2　KenLM 独立训练与 Stupid Backoff 累计计数时间。*
 
 KenLM 较低阶训练时间约 1—11 秒；完整训练集共 {split['train']['sentences']:,} 个句子，其 C++ 外部排序与计数实现使低阶模型训练较快。10 阶训练为 {f(ken[-1]['train_seconds'])} 秒。Stupid Backoff 逐阶处理相同的训练句，SQLite 随组合数增长而产生明显开销。各阶 KenLM 日志记录计数、调整计数、初始概率、插值概率及 ARPA 写出五阶段；可参见 [10 阶原始日志](logs/full/kenlm_10.stderr.log)。
 
-![图 3：训练阶段](figures/full/07_KenLM训练阶段.png)
+<img src="./figures/full/07_KenLM训练阶段.png" alt="图 3：训练阶段" width="900">
 
-*图 3　由日志时间戳计算的 3、6、10 阶阶段耗时；[原始数据 CSV](figures/full/07_KenLM训练阶段.csv)。*
+*图 3　由日志时间戳计算的 3、6、10 阶阶段耗时。*
 
 ## 5. 测试集质量与阶数取舍
 
@@ -242,13 +242,13 @@ $$
 
 式中 $N$ 包含句尾预测位置，$h_i$ 为前文。**在相同分词与测试集上，数值越低表示模型赋予真实后续词的平均概率越高**；该指标不能单独衡量长篇续写的语义连贯性。1 阶至 5 阶下降明显，6 阶之后接近平台；最低测试集 perplexity 为 {f(best['evaluation']['test']['ppl'])}。
 
-![图 4：困惑度](figures/full/03_全测试集困惑度.png)
+<img src="./figures/full/03_全测试集困惑度.png" alt="图 4：测试集 perplexity" width="900">
 
-*图 4　左图用对数刻度展示 1—10 阶，右图放大 3—10 阶；曲线仅连接真实测量点。[原始数据 CSV](figures/full/03_全测试集困惑度.csv)。*
+*图 4　左图用对数刻度展示 1—10 阶，右图放大 3—10 阶；曲线仅连接真实测量点。*
 
-![图 5：模型大小](figures/full/04_模型大小.png)
+<img src="./figures/full/04_模型大小.png" alt="图 5：模型大小" width="900">
 
-*图 5　ARPA 文本模型大小随阶数增长；[原始数据 CSV](figures/full/04_模型大小.csv)。*
+*图 5　ARPA 文本模型大小随阶数增长。*
 
 高阶上下文可以改善局部概率估计，但会增加稀疏组合及存储。模型质量提升与计算成本应联合判断。KenLM 构建时统一启用了折扣回退选项；高阶稀疏计数如触发回退，不应将其结果表述为完全无回退的标准折扣估计。
 
@@ -256,17 +256,17 @@ $$
 
 排序评测用种子 42 从长度至少为 3 词的测试句中随机取 150 个预测位置，候选集为**训练集最高频 100 词加真实目标词**。这是计算量受控的受限候选集实验；Top-1、Top-5 和平均倒数排名不能当作完整词表预测准确率。两种方法使用相同位置和候选集，因此可比较排序行为。
 
-![图 6：受限候选排序](figures/full/05_受限候选排序.png)
+<img src="./figures/full/05_受限候选排序.png" alt="图 6：受限候选排序" width="900">
 
-*图 6　受限候选集 Top-1 命中率；[原始数据 CSV](figures/full/05_受限候选排序.csv)。*
+*图 6　受限候选集 Top-1 命中率。*
 
 续写的主对照固定为 `T=1.0`、`top-k=20`、种子 42，并将阶数从 1 改至 10。为单独观察解码参数，5 阶模型另比较温度 0.7、1.3 和贪婪解码。所有生成只考虑训练词表中最高频 200 词与句尾标记；其流畅性和终止率受候选集限制。下表为**实际输出的开头节选**，完整词序列见 [generation.json](results/full/generation.json)，不只保留主观上最好的样例。
 
 {chr(10).join(generations)}
 
-![图 7：续写长度](figures/full/06_续写长度.png)
+<img src="./figures/full/06_续写长度.png" alt="图 7：续写长度" width="900">
 
-*图 7　固定提示下的生成长度及 80 词截断情况；[原始数据 CSV](figures/full/06_续写长度.csv)。*
+*图 7　固定提示下的生成长度及 80 词截断情况。*
 
 5 阶参数对照如下，变量仅为解码方式或温度，训练模型与提示保持一致：
 
